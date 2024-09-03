@@ -3,3 +3,14 @@
     border-radius: 8px;
     overflow: hidden;
 }
+/* Container chứa bảng để đảm bảo khả năng cuộn ngang */
+.table-container {
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    -webkit-overflow-scrolling: touch; /* Cải thiện khả năng cuộn trên thiết bị cảm ứng */
+    margin-top: 1rem; /* Khoảng cách trên cùng của container */
+}
+
+/* Đảm bảo rằng bảng không bị giãn rộng quá mức */
+.table-container table {
+    min-width: 100%; /* Đảm bảo bảng chiếm ít nhất 100% chiều rộng của container */
+}
