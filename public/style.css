@@ -194,3 +194,18 @@ footer {
     clear: both;
     margin-top: auto; /* Đảm bảo footer xuất hiện ở cuối khi nội dung ngắn */
 }
+/* Cho phép cuộn ngang nếu bảng quá rộng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Giảm kích thước phông chữ trên các thiết bị nhỏ hơn */
+@media screen and (max-width: 768px) {
+    th, td {
+        padding: 4px;
+        font-size: 14px;
+    }
+}
