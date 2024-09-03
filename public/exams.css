@@ -1,0 +1,5 @@
+/* CSS đặc biệt cho trang lịch thi */
+.exams-table {
+    border-radius: 8px;
+    overflow: hidden;
+}

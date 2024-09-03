@@ -1,0 +1,5 @@
+/* CSS đặc biệt cho trang danh sách giáo viên */
+#teachersTable {
+    border-radius: 8px;
+    overflow: hidden;
+}

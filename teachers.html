@@ -5,22 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lớp 10B4 (2024-2025) - Danh Sách Giáo Viên</title>
     <link rel="stylesheet" href="public/style.css">
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            border: 1px solid #003c77;
-        }
-        th {
-            cursor: pointer;
-        }
-        th:hover {
-            background-color: #003c77;
-        }
-    </style>
+    <link rel="stylesheet" href="public/teachers.css"> <!-- Thêm link tới file CSS riêng -->
 </head>
 <body>
     <header>
@@ -40,13 +25,12 @@
         <table id="teachersTable">
             <thead>
                 <tr>
-                    <th>STT</th>
-                    <th>Tên</th>
-                    <th>Môn Học</th>
+                    <th onclick="sortTable(0)">STT</th>
+                    <th onclick="sortTable(1)">Tên</th>
+                    <th onclick="sortTable(2)">Môn Học</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Thêm dữ liệu giáo viên vào đây -->
                 <tr>
                     <td>1</td>
                     <td>Bùi Thị Thu Hiền</td>
@@ -110,21 +94,17 @@
         <p>&copy; 2024-2025 Lớp 10B4</p>
     </footer>
     <script>
-        function sortTeachersTable() {
+        function sortTable(columnIndex) {
             const table = document.getElementById("teachersTable");
             const rows = Array.from(table.querySelectorAll("tbody tr"));
             rows.sort((rowA, rowB) => {
-                const nameA = rowA.querySelectorAll("td")[1].textContent.trim().toLowerCase();
-                const nameB = rowB.querySelectorAll("td")[1].textContent.trim().toLowerCase();
-                return nameA.localeCompare(nameB);
+                const cellA = rowA.querySelectorAll("td")[columnIndex].textContent.trim().toLowerCase();
+                const cellB = rowB.querySelectorAll("td")[columnIndex].textContent.trim().toLowerCase();
+                return cellA.localeCompare(cellB);
             });
             const tbody = table.querySelector("tbody");
             tbody.innerHTML = "";
             rows.forEach(row => tbody.appendChild(row));
-        }
-
-        window.onload = function() {
-            sortTeachersTable();
         }
     </script>
 </body>
