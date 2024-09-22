@@ -46,6 +46,14 @@
                     </tr>
                     <tr>
                         <td></td>
+                        <td>Nguyễn Quỳnh</td>
+                        <td>Anh</td>
+                        <td>15/04/2009</td>
+                        <td>10B4</td>
+                        <td>Ninh Bình</td>
+                    </tr>
+                    <tr>
+                        <td></td>
                         <td>Lê Phạm Quỳnh</td>
                         <td>Anh</td>
                         <td>02/02/2009</td>
@@ -122,7 +130,7 @@
                         <td>Linh</td>
                         <td>12/06/2009</td>
                         <td>10B4</td>
-                        <td>Hà TĨnh</td>
+                        <td>Hà Tĩnh</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -287,7 +295,7 @@
             const tbody = table.querySelector("tbody");
             tbody.innerHTML = "";
             rows.forEach((row, index) => {
-                row.querySelector("td:nth-child(1)").textContent = index + 1;
+                row.querySelector("td:nth-child(1)").textContent = index + 1; // Cập nhật STT
                 tbody.appendChild(row);
             });
         }
